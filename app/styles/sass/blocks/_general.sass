@@ -1,0 +1,330 @@
+// GENERAL PROJECT STYLES
+.h1
+  font-size: 36px
+  line-height: 42px
+  color: #1D1D1D
+  font-weight: 400
+
+.h2
+  font-size: 22px
+  line-height: 34px
+  color: #1D1D1D
+  font-weight: 400
+
+.h3
+  font-size: 16px
+  line-height: 24px
+  color: #1D1D1D
+  font-weight: 400
+
+.header
+  width: 100%
+  box-shadow: 0 0 16px rgba(#262626, .16)
+
+  &__top-line
+    width: 100%
+    height: 72px
+    display: flex
+    justify-content: space-between
+
+    img
+      height: 12.31px
+      width: 119.23px
+      margin: 30px 0
+
+    &-buttons
+      text-align: right
+
+      .button
+        width: 78px
+        height: 40px
+        background: #ffffff
+        border: #E0E0E0 1px solid
+        color: #1D1D1D
+        font-size: 13px
+        line-height: 24px
+        margin: 16px 0
+        padding: 0
+        transition: background, color .5s ease
+
+        &:hover
+          background: linear-gradient(to right, #fff, #f5f5f5)
+
+      a
+        width: 20px
+        height: 23px
+
+        img
+          width: 19px
+          height: 22px
+          margin: 25px 5px 25px 27px
+
+.s-search
+  margin-top: 56px
+  margin-bottom: 100px
+
+  &__line
+    border-bottom: rgba(#757575, .3) 1px solid
+    margin-bottom: 56px
+
+    input
+      font-size: 16px
+      line-height: 24px
+      color: #1d1d1d
+      width: 100%
+      border: none
+      margin: 0
+      text-align: left
+
+      &::placeholder
+        color: rgba(#626262, .5)
+
+  &__restaurants
+    display: grid
+    grid-template-rows: 1fr 1fr 1fr
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-areas: "i i i"
+    grid-gap: 6px
+    min-height: 100%
+
+    &-item
+      grid-area: i
+      margin: 0 5px 16px
+      background-color: rgba(#757575, .04)
+
+      &.mac
+        grid-column: 1
+        grid-row: 1
+
+      &.ds
+        grid-column: 2
+        grid-row: 1
+
+      &.d-ok
+        grid-column: 3
+        grid-row: 1
+
+      &.nha
+        grid-column: 1
+        grid-row: 2
+
+      &.td
+        grid-column: 2
+        grid-row: 2
+
+      &.cinnabon
+        grid-column: 3
+        grid-row: 2
+
+      &.pizzelove
+        grid-column: 1
+        grid-row: 3
+
+      &.z-coff
+        grid-column: 2
+        grid-row: 3
+
+      &.bq
+        grid-column: 3
+        grid-row: 3
+
+      a
+        img
+          margin-bottom: 16px
+          width: 100%
+          transition: opacity .25s ease
+
+          &:hover
+            opacity: .9
+
+.s-search__restaurants-item-desc
+  margin-bottom: 20px
+
+  .h3
+    margin-bottom: 4px
+
+  p
+    font-size: 13px
+    line-height: 21px
+    color: #1D1D1D
+    margin: 0
+    font-weight: 400
+
+    span
+      font-size: 14px
+      line-height: 21px
+      color: #626262
+      margin-bottom: 4px
+
+.footer
+  background-color: #262626
+
+  &__logo
+    border-bottom: rgba(#fff, .4) 1px solid
+    margin-bottom: 32px
+
+    a
+      img
+        width: 191px
+        height: 20px
+        margin: 56px 0 41px
+
+  //&__select
+  //  width: 227px
+  //  height: 40px
+  //  background-color: #3B3B3B
+  //  color: #ffffff
+  //  font-size: 13px
+  //  line-height: 15px
+  //  padding-left: 48px
+  //  outline: none
+  //  border: none
+  //  border-radius: 2px
+  //  margin-bottom: 33px
+
+  &__tag
+    margin-bottom: 21px
+
+    a
+      font-size: 16px
+      line-height: 19px
+      color: #ffffff
+      display: block
+      text-decoration: none
+      transition: opacity .25s ease
+
+      &:hover
+        opacity: .8
+
+      span
+        color: #49A144
+
+  &__links
+    margin-bottom: 59px
+    display: inline-flex
+    width: 90px
+    justify-content: space-between
+
+    a
+      img
+        width: 25px
+        height: 25px
+        transition: opacity .25s ease
+
+        &:hover
+          opacity: .8
+
+  &__desc
+    ul
+      li
+        list-style-type: none
+        margin-bottom: 23px
+
+        a
+          font-size: 13px
+          line-height: 15px
+          color: #ffffff
+          text-decoration: none
+          font-weight: 300
+          transition: opacity .25s ease
+
+          &:hover
+            opacity: .8
+
+  &__download
+    text-align: center
+    padding-top: 42px
+    padding-bottom: 40px
+    border-top: rgba(#fff, .4) 1px solid
+    border-bottom: rgba(#fff, .4) 1px solid
+    margin-bottom: 40px
+    width: 100%
+
+    a
+      img
+        margin: 0 20px
+        transition: opacity .25s ease
+
+        &:hover
+          opacity: .8
+
+  &__info
+    margin-bottom: 40px
+
+    a
+      font-size: 11px
+      line-height: 13px
+      color: #ffffff
+      text-decoration: none
+      transition: opacity .25s ease
+
+      &:hover
+        opacity: .8
+
+.top
+  position: fixed
+  bottom: 24px
+  right: 16px
+  background-color: #59BD5A
+  z-index: 12
+  width: 80px
+  height: 80px
+  text-align: center
+  line-height: 75px
+  border-radius: 2px
+  cursor: pointer
+  transition: all .25s ease
+  &:hover
+    color: #fff
+    background-color: $accent
+    opacity: 1
+  &.active
+    right: 25px
+
+
+.select
+    width: 250px
+    margin: 0
+    position: relative
+    &__header
+      display: flex
+      border: #cccccc 1px solid
+      cursor: pointer
+    &__icon
+      height: 40px
+      width: 40px
+      display: flex
+      align-items: center
+      //justify-content: center
+      text-align: center
+      flex-shrink: 0
+      margin-left: auto
+
+    &__current
+      font-size: 18px
+      line-height: 24px
+      padding: 8px
+    &__body
+      width: 250px
+      border: #cccccc 1px solid
+      border-top: none
+      position: absolute
+      top: 0
+      left: 0
+      display: none
+    &__item
+      line-height: 24px
+      padding: 8px
+      font-size: 16px
+      cursor: pointer
+      &:hover
+        background-color: #f2f2f2
+
+.select.is-active
+  &.select__body
+    display: block
+
+
+
+
+@import "app/styles/sass/media"
