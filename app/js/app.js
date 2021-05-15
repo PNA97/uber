@@ -20,14 +20,41 @@ document.addEventListener('DOMContentLoaded', () => {
         $('html,body').stop().animate({scrollTop:0}, 'slow', 'swing');
     });
 
-    let select = function () {
-        let selectHeader = document.querySelector('.select__header')
-        selectHeader.forEach(item =>{
-            item.addEventListener('click', function (){
-                this.parentElement.classList.toggle('is-active');
+    function select() {
+        let select = document.querySelector('.select');
+        let currentValue = document.querySelector('.select__current');
+        let items = select.querySelectorAll('.select__item');
 
+        // Открытие селекта
+        select.addEventListener('click', (e) => {
+            e.currentTarget.classList.toggle('is-active');
+        })
+        //
+
+        // Обработчики на айтемы
+        items.forEach((item) => {
+            item.addEventListener('click', (e) => {
+                currentValue.innerHTML = e.currentTarget.innerHTML;
             })
         })
-    };
+        //
+
+        // Закрытие селекта при клике вне селекта
+        document.addEventListener('click', (eventObject) => {
+            // console.log(eventObject.target);
+
+            if (eventObject.target.classList.contains('select')) return;
+
+            select.classList.remove('is-active');
+        })
+
+        // if (confirm('Тебе есть 18 лет?')) {
+        //     console.log('PORNO!!!');
+        // } else {
+        //     console.log('poshel nahui pes');
+        // }
+        // //
+    }
+    select();
 });
 

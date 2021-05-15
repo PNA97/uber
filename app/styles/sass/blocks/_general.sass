@@ -63,6 +63,9 @@
   margin-top: 56px
   margin-bottom: 100px
 
+  .h2
+    margin-bottom: 16px
+
   &__line
     border-bottom: rgba(#757575, .3) 1px solid
     margin-bottom: 56px
@@ -169,19 +172,6 @@
         height: 20px
         margin: 56px 0 41px
 
-  //&__select
-  //  width: 227px
-  //  height: 40px
-  //  background-color: #3B3B3B
-  //  color: #ffffff
-  //  font-size: 13px
-  //  line-height: 15px
-  //  padding-left: 48px
-  //  outline: none
-  //  border: none
-  //  border-radius: 2px
-  //  margin-bottom: 33px
-
   &__tag
     margin-bottom: 21px
 
@@ -216,6 +206,7 @@
 
   &__desc
     ul
+      padding: 0
       li
         list-style-type: none
         margin-bottom: 23px
@@ -283,48 +274,58 @@
 
 
 .select
-    width: 250px
-    margin: 0
     position: relative
+    width: 227px
+    height: 40px
+    color: #ffffff
+    cursor: pointer
+    background-color: #3B3B3B
+    border-radius: 2px
+    margin-bottom: 33px
+
     &__header
       display: flex
-      border: #cccccc 1px solid
-      cursor: pointer
+      pointer-events: none
+
     &__icon
+      position: absolute
+      left: 16px
       height: 40px
       width: 40px
       display: flex
       align-items: center
-      //justify-content: center
-      text-align: center
-      flex-shrink: 0
-      margin-left: auto
+
 
     &__current
-      font-size: 18px
-      line-height: 24px
-      padding: 8px
+      position: absolute
+      top: 12px
+      left: 48px
+      font-size: 13px
+      line-height: 15px
+      pointer-events: none
+
     &__body
-      width: 250px
-      border: #cccccc 1px solid
+      top: 39px
+      width: 227px
       border-top: none
       position: absolute
-      top: 0
       left: 0
       display: none
+      background-color: #3B3B3B
+      z-index: 1
+
     &__item
-      line-height: 24px
       padding: 8px
-      font-size: 16px
+      font-size: 13px
+      line-height: 15px
       cursor: pointer
+      border-top: 1px solid #a7a7a7
       &:hover
-        background-color: #f2f2f2
+        background-color: #535353
 
 .select.is-active
-  &.select__body
+  .select__body
     display: block
-
-
 
 
 @import "app/styles/sass/media"
