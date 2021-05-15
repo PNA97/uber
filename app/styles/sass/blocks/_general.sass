@@ -207,6 +207,7 @@
   &__desc
     ul
       padding: 0
+
       li
         list-style-type: none
         margin-bottom: 23px
@@ -265,63 +266,66 @@
   border-radius: 2px
   cursor: pointer
   transition: all .25s ease
+
   &:hover
     color: #fff
     background-color: $accent
     opacity: 1
+
   &.active
     right: 25px
 
 
 .select
-    position: relative
-    width: 227px
+  position: relative
+  width: 227px
+  height: 40px
+  color: #ffffff
+  cursor: pointer
+  background-color: #3B3B3B
+  border-radius: 2px
+  margin-bottom: 33px
+
+  &__header
+    display: flex
+    pointer-events: none
+
+  &__icon
+    position: absolute
+    left: 16px
     height: 40px
-    color: #ffffff
-    cursor: pointer
+    width: 40px
+    display: flex
+    align-items: center
+
+
+  &__current
+    position: absolute
+    top: 12px
+    left: 48px
+    font-size: 13px
+    line-height: 15px
+    pointer-events: none
+
+  &__body
+    top: 39px
+    width: 227px
+    border-top: none
+    position: absolute
+    left: 0
+    display: none
     background-color: #3B3B3B
-    border-radius: 2px
-    margin-bottom: 33px
+    z-index: 1
 
-    &__header
-      display: flex
-      pointer-events: none
+  &__item
+    padding: 8px
+    font-size: 13px
+    line-height: 15px
+    cursor: pointer
+    border-top: 1px solid #a7a7a7
 
-    &__icon
-      position: absolute
-      left: 16px
-      height: 40px
-      width: 40px
-      display: flex
-      align-items: center
-
-
-    &__current
-      position: absolute
-      top: 12px
-      left: 48px
-      font-size: 13px
-      line-height: 15px
-      pointer-events: none
-
-    &__body
-      top: 39px
-      width: 227px
-      border-top: none
-      position: absolute
-      left: 0
-      display: none
-      background-color: #3B3B3B
-      z-index: 1
-
-    &__item
-      padding: 8px
-      font-size: 13px
-      line-height: 15px
-      cursor: pointer
-      border-top: 1px solid #a7a7a7
-      &:hover
-        background-color: #535353
+    &:hover
+      background-color: #535353
 
 .select.is-active
   .select__body
