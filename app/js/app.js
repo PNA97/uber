@@ -47,13 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             select.classList.remove('is-active');
         })
-
-        // if (confirm('Тебе есть 18 лет?')) {
-        //     console.log('PORNO!!!');
-        // } else {
-        //     console.log('poshel nahui pes');
-        // }
-        // //
     }
     select();
 });
