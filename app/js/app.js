@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function select() {
-        let select = document.querySelector('.select');
-        let currentValue = document.querySelector('.select__current');
-        let items = select.querySelectorAll('.select__item');
+        const select = document.querySelector('.select');
+        const currentValue = document.querySelector('.select__current');
+        const items = select.querySelectorAll('.select__item');
 
         // Открытие селекта
         select.addEventListener('click', (e) => {
@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Закрытие селекта при клике вне селекта
         document.addEventListener('click', (eventObject) => {
-            // console.log(eventObject.target);
 
             if (eventObject.target.classList.contains('select')) return;
 
