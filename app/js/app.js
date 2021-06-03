@@ -26,23 +26,25 @@ document.addEventListener('DOMContentLoaded', () => {
         const items = select.querySelectorAll('.select__item');
 
         // Открытие селекта
-        select.addEventListener('click', (e) => {
-            e.currentTarget.classList.toggle('is-active');
+        select.addEventListener('click', ({currentTarget}) => {
+            currentTarget.classList.toggle('is-active');
+
         })
         //
 
         // Обработчики на айтемы
         items.forEach((item) => {
-            item.addEventListener('click', (e) => {
-                currentValue.innerHTML = e.currentTarget.innerHTML;
+            item.addEventListener('click', ({currentTarget}) => {
+                currentValue.innerHTML = currentTarget.innerHTML;
+
             })
         })
         //
 
         // Закрытие селекта при клике вне селекта
-        document.addEventListener('click', (eventObject) => {
+        document.addEventListener('click', ({target}) => {
 
-            if (eventObject.target.classList.contains('select')) return;
+            if (target.classList.contains('select')) return;
 
             select.classList.remove('is-active');
         })
