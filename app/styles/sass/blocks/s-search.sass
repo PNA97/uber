@@ -1,0 +1,187 @@
+.s-search
+  margin-top: 56px
+  margin-bottom: 100px
+
+  .h2
+    margin-bottom: 16px
+
+  &__line
+    border-bottom: rgba(#757575, .3) 1px solid
+    margin-bottom: 56px
+
+    input
+      font-size: 16px
+      line-height: 24px
+      color: #1d1d1d
+      width: 100%
+      border: none
+      margin: 0
+      text-align: left
+
+      &::placeholder
+        color: rgba(#626262, .5)
+
+  &__restaurants
+    display: grid
+    grid-template-rows: 1fr 1fr 1fr
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-areas: "i i i"
+    grid-gap: 6px
+    min-height: 100%
+
+    &-item
+      grid-area: i
+      margin: 0 5px 16px
+      background-color: rgba(#757575, .04)
+
+      &.mac
+        grid-column: 1
+        grid-row: 1
+
+      &.ds
+        grid-column: 2
+        grid-row: 1
+
+      &.d-ok
+        grid-column: 3
+        grid-row: 1
+
+      &.nha
+        grid-column: 1
+        grid-row: 2
+
+      &.td
+        grid-column: 2
+        grid-row: 2
+
+      &.cinnabon
+        grid-column: 3
+        grid-row: 2
+
+      &.pizzelove
+        grid-column: 1
+        grid-row: 3
+
+      &.z-coff
+        grid-column: 2
+        grid-row: 3
+
+      &.bq
+        grid-column: 3
+        grid-row: 3
+
+      a
+        img
+          margin-bottom: 16px
+          width: 100%
+          transition: opacity .25s ease
+
+          &:hover
+            opacity: .9
+
+.s-search__restaurants-item-desc
+  margin-bottom: 20px
+
+  .h3
+    margin-bottom: 4px
+
+  p
+    font-size: 13px
+    line-height: 21px
+    color: #1D1D1D
+    margin: 0
+    font-weight: 400
+
+    span
+      font-size: 14px
+      line-height: 21px
+      color: #626262
+      margin-bottom: 4px
+
+@media only screen and (max-width : 768px)
+  .s-search
+    &__restaurants
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr
+      grid-template-columns: 1fr 1fr
+      grid-template-areas: "i i"
+      &-item
+        &.mac
+          grid-column: 1
+          grid-row: 1
+
+        &.ds
+          grid-column: 2
+          grid-row: 1
+
+        &.d-ok
+          grid-column: 1
+          grid-row: 2
+
+        &.nha
+          grid-column: 2
+          grid-row: 2
+
+        &.td
+          grid-column: 1
+          grid-row: 3
+
+        &.cinnabon
+          grid-column: 2
+          grid-row: 3
+
+        &.pizzelove
+          grid-column: 1
+          grid-row: 4
+
+        &.z-coff
+          grid-column: 2
+          grid-row: 4
+
+        &.bq
+          grid-column: 1
+          grid-row: 5
+
+@media only screen and (max-width : 480px)
+  .s-search
+    &__restaurants
+      display: grid
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+      grid-template-columns: 1fr
+      grid-template-areas: "i"
+      &-item
+        margin: 0
+        &.mac
+          grid-column: 1
+          grid-row: 1
+
+        &.ds
+          grid-column: 1
+          grid-row: 2
+
+        &.d-ok
+          grid-column: 1
+          grid-row: 3
+
+        &.nha
+          grid-column: 1
+          grid-row: 4
+
+        &.td
+          grid-column: 1
+          grid-row: 5
+
+        &.cinnabon
+          grid-column: 1
+          grid-row: 6
+
+        &.pizzelove
+          grid-column: 1
+          grid-row: 7
+
+        &.z-coff
+          grid-column: 1
+          grid-row: 8
+
+        &.bq
+          grid-column: 1
+          grid-row: 9
